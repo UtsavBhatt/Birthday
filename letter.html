@@ -5,18 +5,61 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Birthday Letter</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Minimal styles to display the uploaded background image and readable letter content */
+    .letter-hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      box-sizing: border-box;
+      background-image: url('assets/images/letterbg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .letter-card {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(255,255,255,0.86);
+      color: #111;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      backdrop-filter: blur(4px);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .letter-card { background: rgba(0,0,0,0.6); color: #f7f7f7; }
+    }
+
+    .letter-card h1 { margin-top: 0; }
+  </style>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Birthday</h1>
-    </header>
+  <main class="letter-hero">
+    <article class="letter-card" role="article" aria-label="Birthday letter">
+      <h1>Happy Birthday!</h1>
 
-    <!-- Letter will be injected into the element below by letter.js -->
-    <div id="letter" aria-live="polite"></div>
+      <p>Dear Friend,</p>
+
+      <p>
+        Wishing you a wonderful birthday full of joy, laughter, and love.
+        I hope the coming year brings you new adventures, memorable moments,
+        and everything you dream of.
+      </p>
+
+      <p>
+        Thank you for being the amazing person you are — kind, strong, and inspiring.
+        Celebrate big today — you deserve it!
+      </p>
+
+      <p>Warm wishes,</p>
+      <p><strong>[Your Name]</strong></p>
+
+    </article>
   </main>
-
-  <!-- Load the script that provides and injects the letter HTML -->
-  <script src="letter.js"></script>
 </body>
 </html>
