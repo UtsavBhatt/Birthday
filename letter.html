@@ -1,42 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Letter — 💌</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Birthday Letter</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="page-letter">
-<!-- PAPER BACKGROUND: optional image at assets/images/bg-paper.jpg -->
-<div class="paper-wrap">
-<button class="back" onclick="location.href='gifts.html'">← Back</button>
+<body>
+  <main>
+    <header>
+      <h1>Birthday</h1>
+    </header>
 
+    <!-- Letter will be injected into the element below by letter.js -->
+    <div id="letter" aria-live="polite"></div>
+  </main>
 
-<section class="letter card-paper">
-<header class="letter-header">
-<img src="assets/icons/cat.svg" alt="cat" class="cat-small" /> <!-- PLACEHOLDER -->
-<h2>To my dearest [Her Name]</h2>
-</header>
-
-
-<article id="typed-letter" class="letter-body">
-<!-- The typed letter will appear here via JS -->
-</article>
-
-
-<footer class="letter-footer">Always, <span class="signature">Your Cat</span> 😺<br/><small>14 Feb 2026</small></footer>
-</section>
-</div>
-
-
-<script src="js/script.js"></script>
-<script>
-// The letter text: replace content between the backticks with your personal message
-const LETTER_TEXT = `Dear [Her Name],\n\nOn the day we first met, something small and bright lit up inside me. You turned ordinary moments into tiny adventures. You make me laugh, you make me brave, and you make my heart feel like home.\n\nHappy Valentine’s Day. I am yours — always.\n\nLove,\nYour Cat 😺`;
-
-
-window.initLetter && window.initLetter(LETTER_TEXT);
-</script>
+  <!-- Load the script that provides and injects the letter HTML -->
+  <script src="letter.js"></script>
 </body>
 </html>
