@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Memories</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-memories">
+<div class="bg-layer soft"></div>
+<main class="container">
+<button class="back" onclick="location.href='gifts.html'">← Back</button>
+
+
+<h2>Our favorite moments 📸</h2>
+
+
+<div class="gallery">
+<!-- Add your four favorite photos to assets/images/memory1.jpg ... memory4.jpg -->
+<figure class="photo" data-caption="The day I realized I liked you.">
+<img src="assets/images/memory1.jpg" alt="memory 1"/>
+<figcaption>The day I realized I liked you.</figcaption>
+</figure>
+
+
+<figure class="photo" data-caption="Our first trip together.">
+<img src="assets/images/memory2.jpg" alt="memory 2"/>
+<figcaption>Our first trip together.</figcaption>
+</figure>
+
+
+<figure class="photo" data-caption="My favorite smile.">
+<img src="assets/images/memory3.jpg" alt="memory 3"/>
+<figcaption>My favorite smile.</figcaption>
+</figure>
+
+
+<figure class="photo" data-caption="Us, being us.">
+<img src="assets/images/memory4.jpg" alt="memory 4"/>
+<figcaption>Us, being us.</figcaption>
+</figure>
+</div>
+
+
+<!-- Modal for zoom -->
+<div id="modal" class="modal" aria-hidden="true">
+<div class="modal-content">
+<button id="modalClose" class="modal-close">✕</button>
+<img id="modalImg" src="" alt="enlarged"/>
+<p id="modalCaption"></p>
+</div>
+</div>
+
+
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
